@@ -1,0 +1,12 @@
+.canvas {
+  background-color: white;
+  border: 3px solid black;
+
+  
+}
+
+canvas {
+  @media (max-width: 768px){
+    max-width: calc(100vw - 10px);
+  }
+}

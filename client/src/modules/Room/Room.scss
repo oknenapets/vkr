@@ -1,0 +1,152 @@
+.room {
+  max-width: 1350px;
+  margin: 20px auto;
+}
+
+.box {
+  display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.info {
+  padding: 20px;
+  color: white;
+  background-color: #2c2f33;
+  border: 3px solid black;
+
+  &__round {
+    margin-bottom: 10px;
+  }
+}
+
+.players {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #2c2f33;
+  color: white;
+  border: 3px solid black;
+
+  @media (max-width: 768px) {
+    order: 3;
+  }
+}
+
+.player {
+  display: flex;
+  margin-bottom: 10px;
+  width: 250px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+
+  &__avatar {
+    height: 50px;
+    width: 50px;
+    background-color: lightgrey;
+    background-image: url('../../assets/avatar.svg');
+    background-size: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  &_me {
+    background: lightgreen;
+  }
+
+  &_drawer {
+    background-color: lightseagreen;
+  }
+}
+
+.column {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: auto;
+  }
+}
+
+.chat {
+  border: 1px solid black;
+  flex-grow: 1;
+  background-color: #2c2f33;
+  color: white;
+  border: 3px solid black;
+  // display: flex;
+  // flex-direction: column;
+
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    height: 580px;
+    overflow-y: auto;
+
+    @media (max-width: 768px) {
+      height: 150px;
+    }
+  }
+
+  &__panel {
+    border: 1px solid black;
+    display: flex;
+    margin-top: auto;
+  }
+
+  &__input {
+    flex-grow: 1;
+  }
+}
+
+.message {
+  text-align: left;
+  margin-bottom: 5px;
+
+  &__author {
+    margin-right: 5px;
+    color: rgb(0, 128, 128);
+  }
+
+  &__data {
+    &_success {
+      background-color: lightgreen;
+    }
+  }
+}
+
+.modal {
+
+  &-room,
+  &-chose {
+    padding: 20px;
+    background-color: #2c2f33;
+    border-radius: 8px;
+  }
+
+  &-room {
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    .row {
+      margin-bottom: 10px;
+    }
+  }
+
+  &-chose {
+    &__word {
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}

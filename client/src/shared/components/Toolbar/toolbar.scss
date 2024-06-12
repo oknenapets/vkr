@@ -1,0 +1,106 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  max-height: 200px;
+  min-height: 200px;
+  border: 3px solid black;
+  border-top: none;
+  border-bottom: none;
+  background-color: #2c2f33;
+
+  @media (max-width: 768px){
+    min-height: auto;
+  }
+  
+  &__thick {
+    display: block;
+  }
+  
+  &__btn {
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    svg {
+      color: white;
+    }
+  }
+
+  &__item {
+    padding: 3px;
+    background-color: lightgray;
+    height: fit-content;
+    border-radius: 8px;
+
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &_active {
+      background-color: burlywood;
+    }
+    
+    &_range {
+      color: white;
+    }
+  }
+
+  .color {
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  .brush {
+    background-image: url('../../../assets/icons/pencil.svg');
+  }
+
+  .rect {
+    background-image: url('../../../assets/icons/rect.svg');
+  }
+
+  .circle {
+    background-image: url('../../../assets/icons/circle.svg');
+  }
+
+  .eraser {
+    background-image: url('../../../assets/icons/eraser.svg');
+  }
+
+  .fill {
+    background-image: url('../../../assets/icons/fill.svg');
+  }
+
+  .trash {
+    background-image: url('../../../assets/icons/trash.svg');
+  }
+
+  .line {
+    background-image: url('../../../assets/img/line.png');
+  }
+
+  .undo {
+    background-image: url('../../../assets/icons/undo.svg');
+  }
+
+  .redo {
+    transform: scale(-1, 1);
+    background-image: url('../../../assets/icons/undo.svg');
+  }
+
+  .save {
+    background-image: url('../../../assets/img/save.png');
+  }
+}
